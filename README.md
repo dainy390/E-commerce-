@@ -3,7 +3,7 @@
 
 Description
 -----------
-<a href="http://localhost:3000/ style="color:blue">LIVE DEMO</a>
+<a href="http://localhost:3000/" style="color:blue">LIVE DEMO</a>
 This project is the frontend implementation of an ecommerce website. It utilizes React, Redux, and interacts with a dummy ecommerce API service to fetch and manipulate product data.
 
 Functionality
