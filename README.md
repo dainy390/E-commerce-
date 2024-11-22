@@ -1,6 +1,6 @@
 # E-commerce- React App
 
-<a href="http://localhost:3000/" style="color:blue">LIVE DEMO</a>
+<a href="https://e-commece-shoping.netlify.app/">LIVE DEMO</a>
 ===================
 
 Description
