@@ -44,14 +44,15 @@ export default function ProductItem({ item }) {
   }
   // delete request
   function handleDelelteProduct(item) {
-    let url = `https://my-json-server.typicode.com/jaiswalaryan/data/products/${item.id}`;
-    let result = customFetch(url, { method: "DELETE" });
+  let url = `https://my-json-server.typicode.com/jaiswalaryan/data/products/${item.id}`;
+  customFetch(url, { method: "DELETE" });
 
-    let index = products.indexOf(item);
-    products.splice(index, 1);
-    dispatchProduct(addproducts([...products]));
-    showToastMessage("item deleted", "warning");
-  }
+  let index = products.indexOf(item);
+  products.splice(index, 1);
+  dispatchProduct(addproducts([...products]));
+  showToastMessage("item deleted", "warning");
+}
+
   // closing edit mode
   function handleCancel(item) {
     item.edit = true;
