@@ -1,11 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export default function Nav() {
   const navigate = useNavigate();
-  let total = useSelector((state) => state.totalCart);
+  const total = useSelector((state) => state.totalCart);
 
   return (
     <nav
@@ -13,9 +12,9 @@ export default function Nav() {
       style={style.nav}
     >
       <div className="container-fluid">
-        <a className="navbar-brand fs-3" href="#" style={style.navHead}>
-          Online shoping
-        </a>
+        <Link to="/" className="navbar-brand fs-3" style={style.navHead}>
+          Online shopping
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,13 +29,13 @@ export default function Nav() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link to="/" className="nav-link active text-light" href="#">
+              <Link to="/" className="nav-link active text-light">
                 All Products
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/addproducts" className="nav-link active text-light">
-                Add a Items
+                Add Items
               </Link>
             </li>
           </ul>
@@ -60,9 +59,7 @@ export default function Nav() {
               >
                 {total}
               </p>
-            ) : (
-              ""
-            )}
+            ) : null}
             <img
               src="https://cdn-icons-png.flaticon.com/512/236/236832.png"
               alt="error"
